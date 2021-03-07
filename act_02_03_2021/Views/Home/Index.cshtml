@@ -1,0 +1,183 @@
+﻿@model IEnumerable<act_02_03_2021.Models.Datos>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel=StyleSheet href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                Correo
+            </th>
+            <th>
+                Nombre de usuario
+            </th>
+            <th>
+                Clave
+            </th>
+            <th>
+                Repetir clave
+            </th>
+            <th>
+                Apellido
+            </th>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Pais de origen
+            </th>
+            <th>
+                Provincia
+            </th>
+            <th>
+                Codigo postal
+            </th>
+            <th>
+                Sexo
+            </th>
+            <th>
+                Fecha de nacimiento
+            </th>
+            <th>
+                Comentarios
+            </th>
+            <th>
+                Acepto terminos
+            </th>
+            <th></th>
+        </tr>
+
+        <!--<tr>
+            <th>-->
+                @*@Html.DisplayNameFor(model => model.Correo)*@
+                @*@Html.DisplayName("Correo")*@
+            <!--</th>
+            <th>-->
+                @*@Html.DisplayNameFor(model => model.NombreUsuario)*@
+                @*@Html.DisplayName("NombreUsuario")*@
+            <!--</th>
+            <th>-->
+                @*@Html.DisplayNameFor(model => model.Clave)*@
+                @*@Html.DisplayName("Clave")*@
+            <!--</th>
+            <th>-->
+                @*@Html.DisplayNameFor(model => model.RepetirClave)*@
+                @*@Html.DisplayName("RepetirClave")*@
+            <!--</th>
+            <th>-->
+                @*@Html.DisplayNameFor(model => model.Apellido)*@
+                @*@Html.DisplayName("Apellido")*@
+            <!--</th>
+            <th>-->
+                @*@Html.DisplayNameFor(model => model.Nombre)*@
+                @*@Html.DisplayName("Nombre")*@
+            <!--</th>
+            <th>-->
+                @*@Html.DisplayNameFor(model => model.PaisOrigen)*@
+                @*@Html.DisplayName("PaisOrigen")*@
+            <!--</th>
+            <th>-->
+                @*@Html.DisplayNameFor(model => model.Provincia)*@
+                @*@Html.DisplayName("Provincia")*@
+            <!--</th>
+            <th>-->
+                @*@Html.DisplayNameFor(model => model.CodigoPostal)*@
+                @*@Html.DisplayName("CodigoPostal")*@
+            <!--</th>
+            <th>-->
+                @*@Html.DisplayNameFor(model => model.Sexo)*@
+                @*@Html.DisplayName("Sexo")*@
+            <!--</th>
+            <th>-->
+                @*@Html.DisplayNameFor(model => model.FechaNacimiento)*@
+                @*@Html.DisplayName("FechaNacimiento")*@
+            <!--</th>
+            <th>-->
+                @*@Html.DisplayNameFor(model => model.Comentarios)*@
+                @*@Html.DisplayName("Comentarios")*@
+            <!--</th>
+            <th>-->
+                @*@Html.DisplayNameFor(model => model.AceptoTerminos)*@
+                @*@Html.DisplayName("AceptoTerminos")*@
+            <!--</th>
+            <th></th>
+        </tr>-->
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Correo)
+                    @*@Html.Display("Correo")*@
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NombreUsuario)
+                    @*@Html.Display("NombreUsuario")*@
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Clave)
+                    @*@Html.Display("Clave")*@
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RepetirClave)
+                    @*@Html.Display("RepetirClave")*@
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apellido)
+                    @*@Html.Display("Apellido")*@
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                    @*@Html.Display("Nombre")*@
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PaisOrigen)
+                    @*@Html.Display("PaisOrigen")*@
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Provincia)
+                    @*@Html.Display("Provincia")*@
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CodigoPostal)
+                    @*@Html.Display("CodigoPostal")*@
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sexo)
+                    @*@Html.Display("Sexo")*@
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaNacimiento)
+                    @*@Html.Display("FechaNacimiento")*@
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Comentarios)
+                    @*@Html.Display("Comentarios")*@
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AceptoTerminos)
+                    @*@Html.Display("AceptoTerminos")*@
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.NombreUsuario }) | @Html.ActionLink("Details", "Details", new { id = item.NombreUsuario }) | @Html.ActionLink("Delete", "Delete", new { id = item.NombreUsuario })
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>
+

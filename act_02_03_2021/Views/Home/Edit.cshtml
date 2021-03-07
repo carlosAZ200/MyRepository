@@ -1,0 +1,170 @@
+﻿@model act_02_03_2021.Models.Datos
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+    <link rel=StyleSheet href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <div class="form-horizontal">
+            <h4>Datos</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <div class="col-md-10">
+                    <p>
+                        Correo:
+                        @*@Html.TextBox("Correo")*@
+                        @Html.TextBoxFor(model => model.Correo)
+                    </p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <p>
+                        Nombre del usuario:
+                        @*@Html.Display("NombreUsuario")*@
+                        @Html.DisplayFor(model => model.NombreUsuario)
+                        @*@Html.Hidden("NombreUsuario")*@
+                        @Html.HiddenFor(model => model.NombreUsuario)
+                    </p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <p>
+                        Clave:
+                        @*@Html.TextBox("Clave")*@
+                        @Html.TextBoxFor(model => model.Clave)
+                    </p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <p>
+                        Repetir la clave:
+                        @*@Html.TextBox("RepetirClave")*@
+                        @Html.TextBoxFor(model => model.RepetirClave)
+                    </p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <p>
+                        Apellido:
+                        @*@Html.TextBox("Apellido")*@
+                        @Html.TextBoxFor(model => model.Apellido)
+                    </p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <p>
+                        Nombre:
+                        @*@Html.TextBox("Nombre")*@
+                        @Html.TextBoxFor(model => model.Nombre)
+                    </p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <p>
+                        Pais de origen:
+                        @*@Html.TextBox("PaisOrigen")*@
+                        @Html.TextBoxFor(model => model.PaisOrigen)
+                    </p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <p>
+                        Provincia:
+                        @*@Html.TextBox("Provincia")*@
+                        @Html.TextBoxFor(model => model.Provincia)
+                    </p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <p>
+                        Codigo postal:
+                        @*@Html.TextBox("CodigoPostal")*@
+                        @Html.TextBoxFor(model => model.CodigoPostal)
+                    </p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <p>
+                        Sexo:
+                        @*@Html.TextBox("Sexo")*@
+                        @Html.TextBoxFor(model => model.Sexo)
+                    </p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <p>
+                        Fecha de nacimiento:
+                        @*@Html.TextBox("FechaNacimiento")*@
+                        @Html.TextBoxFor(model => model.FechaNacimiento)
+                    </p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <p>
+                        Comentarios:
+                        @*@Html.TextBox("Comentarios")*@
+                        @Html.TextBoxFor(model => model.Comentarios)
+                    </p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <p>
+                        Acepto terminos:
+                        @*@Html.TextBox("AceptoTerminos")*@
+                        @Html.TextBoxFor(model => model.AceptoTerminos)
+                    </p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </div>
+
+        </div>
+                
+            
+            }
+
+
+            <div>
+                @Html.ActionLink("Volver", "Index")
+            </div>
+    </body>
+</html>

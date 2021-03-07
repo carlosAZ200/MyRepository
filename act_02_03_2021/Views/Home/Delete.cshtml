@@ -1,0 +1,164 @@
+﻿@model act_02_03_2021.Models.Datos
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+    <link rel=StyleSheet href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>Datos</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Correo)
+                @*@Html.DisplayName("Correo")*@
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Correo)
+                @*@Html.Display("Correo")*@
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.NombreUsuario)
+                @*@Html.DisplayName("NombreUsuario")*@
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NombreUsuario)
+                @*@Html.Display("NombreUsuario")*@
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Clave)
+                @*@Html.DisplayName("Clave")*@
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Clave)
+                @*@Html.Display("Clave")*@
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.RepetirClave)
+                @*@Html.DisplayName("RepetirClave")*@
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.RepetirClave)
+                @*@Html.Display("RepetirClave")*@
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Apellido)
+                @*@Html.DisplayName("Apellido")*@
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Apellido)
+                @*@Html.Display("Apellido")*@
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Nombre)
+                @*@Html.DisplayName("Nombre")*@
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Nombre)
+                @*@Html.Display("Nombre")*@
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PaisOrigen)
+                @*@Html.DisplayName("PaisOrigen")*@
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PaisOrigen)
+                @*@Html.Display("PaisOrigen")*@
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Provincia)
+                @*@Html.DisplayName("Provincia")*@
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Provincia)
+                @*@Html.Display("Provincia")*@
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CodigoPostal)
+                @*@Html.DisplayName("CodigoPostal")*@
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CodigoPostal)
+                @*@Html.Display("CodigoPostal")*@
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Sexo)
+                @*@Html.DisplayName("Sexo")*@
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Sexo)
+                @*@Html.Display("Sexo")*@
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FechaNacimiento)
+                @*@Html.DisplayName("FechaNacimiento")*@
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FechaNacimiento)
+                @*@Html.Display("FechaNacimiento")*@
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Comentarios)
+                @*@Html.DisplayName("Comentarios")*@
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Comentarios)
+                @*@Html.Display("Comentarios")*@
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.AceptoTerminos)
+                @*@Html.DisplayName("AceptoTerminos")*@
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AceptoTerminos)
+                @*@Html.Display("AceptoTerminos")*@
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>
